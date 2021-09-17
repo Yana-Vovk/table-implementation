@@ -4,9 +4,20 @@ import TableHead from '../TableHead';
 import TableBody from '../TableBody';
 
 const Table = () => {
+
+  const toggleCheckboxOn = () => {
+    
+  };
+
+  const toggleCheckboxOff = () => {
+    
+  };    
     return (
        <TableContainer>
-        <TableHead />
+        <TableHead
+          switchOn={toggleCheckboxOn}
+          switchOff={toggleCheckboxOff}
+        />
         <TableBody/>
       </TableContainer>
     )

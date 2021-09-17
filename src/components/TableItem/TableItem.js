@@ -6,7 +6,7 @@ const TableItem = ({number,name,age,height,weight,salary}) => {
     return (
         <>
             <td>
-                    <label>
+                    <label> 
                         <CustomCheckbox type="checkbox" />
                     </label>
             </td>

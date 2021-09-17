@@ -12,7 +12,7 @@ const TableBody = () => {
         if (m < 0 || (m === 0 && today.getDate() < birthday.getDate())) {
             age--;
         }
-        return age;
+        return age; 
     };
 
     const calculateHeight = (heightFeet) => {

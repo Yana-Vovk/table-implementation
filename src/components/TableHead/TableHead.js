@@ -1,23 +1,35 @@
 import React from 'react';
-import { TblHead } from './tableHeadStyle';
+import { TblHead, CustomHeadCheckbox, TblItem } from './tableHeadStyle';
 
-const TableHead = () => {
+const TableHead = ({switchOn, switchOff}) => {
+    const handleCheckClick = (e) => {
+        if (e.currentTarget.checked === true) {
+            switchOn();
+            console.log('checked');
+        } else {
+            switchOff();
+           console.log('unchecked'); 
+        }
+    };
+
     return (
-        <TblHead>
-            <tr>
-                <th>
-                    <input type="checkbox"/>
-                </th>
-                <th>№</th>
-                <th>ФИО</th>
-                <th>Возраст (лет)</th>
-                <th>Рост</th>
-                <th>Вес</th>
-                <th>Зарплата</th>
-                <th></th>
-                <th></th>
-            </tr>
-        </TblHead>
+        <thead>
+            <TblHead>
+                <TblItem>
+                    <label>
+                        <CustomHeadCheckbox type="checkbox" onClick={handleCheckClick}/>
+                    </label>
+                </TblItem>
+                <TblItem>№</TblItem>
+                <TblItem>ФИО</TblItem>
+                <TblItem>Возраст (лет)</TblItem>
+                <TblItem>Рост</TblItem>
+                <TblItem>Вес</TblItem>
+                <TblItem>Зарплата</TblItem>
+                <TblItem></TblItem>
+                <TblItem></TblItem>
+            </TblHead>
+        </thead>
     )
 }
 
