@@ -10,7 +10,7 @@ const Title = styled.h1`
   color: #4C4C4C;
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.17;
+  line-height: 1.17; 
 `;
 
 const Wrapping = styled.div`

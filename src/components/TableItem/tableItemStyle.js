@@ -20,7 +20,3 @@ background-size: 70%;
 background-color: #FFFFFF;
 }
 `;
-
-export const TableDate = styled.td`
-min-width: 80px;
-`;

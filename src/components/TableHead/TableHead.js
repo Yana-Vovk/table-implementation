@@ -8,7 +8,7 @@ const TableHead = ({switchOn, switchOff}) => {
             console.log('checked');
         } else {
             switchOff();
-           console.log('unchecked'); 
+            console.log('unchecked');
         }
     };
 

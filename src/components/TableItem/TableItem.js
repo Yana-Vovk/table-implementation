@@ -2,13 +2,13 @@ import React from 'react';
 import { CustomCheckbox } from './tableItemStyle';
 import { FiEdit2, FiTrash2 } from "react-icons/fi";
 
-const TableItem = ({number,name,age,height,weight,salary}) => {
+const TableItem = ({ number, name, age, height, weight, salary }) => {
     return (
         <>
             <td>
-                    <label> 
-                        <CustomCheckbox type="checkbox" />
-                    </label>
+                <label>
+                    <CustomCheckbox className="checkbox" type="checkbox" />
+                </label>
             </td>
             <td>{number}</td>
             <td>{name}</td>
