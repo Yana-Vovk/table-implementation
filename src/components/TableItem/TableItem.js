@@ -1,6 +1,5 @@
 import React from 'react';
-import { CustomCheckbox } from './tableItemStyle';
-import { FiEdit2, FiTrash2 } from "react-icons/fi";
+import { CustomCheckbox, EditIcon, DeleteIcon } from './tableItemStyle';
 
 const TableItem = ({ number, name, age, height, weight, salary, filter }) => {
     return (
@@ -16,8 +15,8 @@ const TableItem = ({ number, name, age, height, weight, salary, filter }) => {
             <td>{height}</td>
             <td>{weight}кг</td>
             <td>${salary}</td>
-            <td><FiEdit2 /></td>
-            <td><FiTrash2 /></td>
+            <td><EditIcon/></td>
+            <td><DeleteIcon/></td>
         </>
     );
 }

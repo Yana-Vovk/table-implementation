@@ -1,5 +1,20 @@
 import styled from 'styled-components';
 import icon from '../../icons/checkmark.svg';
+import { FiEdit2, FiTrash2 } from "react-icons/fi";
+
+export const EditIcon = styled(FiEdit2)`
+width: 17px;
+height: 17px;
+ &:hover {
+    color: #60BE96;
+  }`;
+
+export const DeleteIcon = styled(FiTrash2)`
+width: 17px;
+height: 17px;
+ &:hover {
+    color: #60BE96;
+  }`;
 
 export const CustomCheckbox = styled.input`
 -webkit-appearance: none;
@@ -20,5 +35,3 @@ background-size: 70%;
 background-color: #FFFFFF;
 }
 `;
-
-
