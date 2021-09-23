@@ -16,7 +16,9 @@ width: 214px;
 padding: 15px 20px;
 border-radius: 4px;
 color: #FAFAFA;
-background-color: #C9C9C9;
+
+background-color: ${(props) => (props.regular ? "#55A985" : "#C9C9C9")};
+box-shadow: ${(props) => (props.regular ? "0px 6px 24px -12px rgba(0, 128, 73, 0.54);":"" )};
 border: inherit;
 
 &:hover,
@@ -24,6 +26,6 @@ border: inherit;
 background-color: #60BE96;
 border-color: inherit;
 box-shadow: 0px 6px 24px -12px rgba(0, 128, 73, 0.54);
-}
+} 
 `;
 

@@ -3,17 +3,17 @@ import { TableContainer } from './tableStyle';
 import TableHead from '../TableHead';
 import TableBody from '../TableBody';
 
-const Table = () => {
+const Table = ({searchFunction}) => {
   const findAllCheckBoxes = () => {
     let arrayOfCheckboxes = [];
-    const a = document.getElementsByClassName("checkbox");
-    arrayOfCheckboxes = [...a];
+    const checkboxList = document.getElementsByClassName("checkbox");
+    arrayOfCheckboxes = [...checkboxList];
     return arrayOfCheckboxes;
   };
 
   const toggleCheckboxOn = () => {
     const arrayOfCheckboxes = findAllCheckBoxes();
-    arrayOfCheckboxes.map((item)=>(item.checked = true));
+    arrayOfCheckboxes.map((item) => (item.checked = true));
   };
 
   const toggleCheckboxOff = () => {
@@ -21,13 +21,17 @@ const Table = () => {
     arrayOfCheckboxes.map((item) => (item.checked = false));
   };
 
+  const changeFnc = (ifChange) => {
+    searchFunction (ifChange);
+  }
+
     return (
        <TableContainer>
         <TableHead
           switchOn={toggleCheckboxOn}
           switchOff={toggleCheckboxOff}
         />
-        <TableBody/>
+        <TableBody changeFunction={changeFnc}/>
       </TableContainer>
     )
 }

@@ -3,7 +3,7 @@ import TableItem from '../TableItem';
 import employeeItems from '../../employees.json';
 import { TblBody, Row } from './tableBodyStyle';
 
-const TableBody = () => {
+const TableBody = ({changeFunction}) => {
     const calculateAge = (birthdayUnix) => {
         const birthday = new Date(birthdayUnix * 1000);
         const today = new Date();
@@ -29,6 +29,11 @@ const TableBody = () => {
         return (Math.round(weightPounds * 0.45));        
     }
 
+    const findCheck = () => {
+        const boxChanged = true;
+        changeFunction(boxChanged);
+        return boxChanged;
+    }
 
     return (
         <TblBody> 
@@ -36,11 +41,13 @@ const TableBody = () => {
                 <Row key={id}>
                     <TableItem
                         number={id}
-                        name={first_name+' ' +last_name}
-                        age={calculateAge( date_of_birth )}
-                        height={ calculateHeight(height)}
+                        name={first_name + ' ' + last_name}
+                        age={calculateAge(date_of_birth)}
+                        height={calculateHeight(height)}
                         weight={calculateWeight(weight)}
-                        salary={salary} />
+                        salary={salary}
+                        filter={findCheck}
+                    />
                 </Row>
             ))}
         </TblBody>

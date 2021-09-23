@@ -20,11 +20,29 @@ const Wrapping = styled.div`
 `;
 
 function App() {
+  const findCheckBoxes = (ifCheckboxChange) => {
+    let arrayOfCheckboxes = [];
+    const checkboxList = document.getElementsByClassName("checkbox");
+    arrayOfCheckboxes = [...checkboxList];
+    if (ifCheckboxChange===true) {
+      const ifAnyChecked = arrayOfCheckboxes.find(item => item.checked === true);
+      if (ifAnyChecked === undefined) {
+        const ifChecked = false;
+        console.log('false ',ifChecked );
+        return ifChecked;
+      } else {
+        const ifChecked = true;
+        console.log('true ',ifChecked);
+        return ifChecked;
+      }
+    }
+  };
+  
   return (
     <Wrapping>
       <Title>Таблица пользователей</Title>
-      <Table/>
-      <Button/>
+      <Table searchFunction={findCheckBoxes} />
+      <Button ifCheckedForBtn={findCheckBoxes()} />
     </Wrapping>
   );
 } 
