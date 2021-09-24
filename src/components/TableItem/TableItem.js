@@ -1,7 +1,7 @@
 import React from 'react';
 import { CustomCheckbox, EditIcon, DeleteIcon } from './tableItemStyle';
 
-const TableItem = ({ number, name, age, height, weight, salary, filter }) => {
+const TableItem = ({ number, name, age, height, weight, salary, filter, onDeleteContact }) => {
     return (
         <>
             <td>
@@ -16,7 +16,7 @@ const TableItem = ({ number, name, age, height, weight, salary, filter }) => {
             <td>{weight}кг</td>
             <td>${salary}</td>
             <td><EditIcon/></td>
-            <td><DeleteIcon/></td>
+            <td><DeleteIcon onClick={() => onDeleteContact(number)}/></td>
         </>
     );
 }

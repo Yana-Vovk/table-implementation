@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { TableContainer } from './tableStyle';
 import TableHead from '../TableHead';
 import TableBody from '../TableBody';
+import employeeItems from '../../employees.json';
 
-const Table = ({searchFunction}) => {
+const Table = ({ searchFunction }) => {
+  const [contacts, setContacts] = useState(employeeItems);
+  
   const findAllCheckBoxes = () => {
     let arrayOfCheckboxes = [];
     const checkboxList = document.getElementsByClassName("checkbox");
@@ -25,13 +28,23 @@ const Table = ({searchFunction}) => {
     searchFunction (ifChange);
   }
 
+   const deleteContactFunc = (contactId) => {
+     console.log('delete ', contactId);
+     setContacts((prevState) => (prevState.filter((contact) => contact.id !== contactId)
+    ));
+    }
+
+
     return (
        <TableContainer>
         <TableHead
           switchOn={toggleCheckboxOn}
           switchOff={toggleCheckboxOff}
         />
-        <TableBody changeFunction={changeFnc}/>
+        <TableBody
+          changeFunction={changeFnc}
+          deleteContact={deleteContactFunc}
+          arrayOfEmployees={contacts}/>
       </TableContainer>
     )
 }

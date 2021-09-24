@@ -1,9 +1,8 @@
 import React from 'react';
 import TableItem from '../TableItem';
-import employeeItems from '../../employees.json';
 import { TblBody, Row } from './tableBodyStyle';
 
-const TableBody = ({changeFunction}) => {
+const TableBody = ({changeFunction, deleteContact, arrayOfEmployees}) => {
     const calculateAge = (birthdayUnix) => {
         const birthday = new Date(birthdayUnix * 1000);
         const today = new Date();
@@ -37,16 +36,17 @@ const TableBody = ({changeFunction}) => {
 
     return (
         <TblBody> 
-            {employeeItems.map(({id,first_name,last_name,date_of_birth,height,weight,salary}) => (
+            {arrayOfEmployees.map(({id,first_name,last_name,date_of_birth,height,weight,salary},index) => (
                 <Row key={id}>
                     <TableItem
-                        number={id}
+                        number={index+1}
                         name={first_name + ' ' + last_name}
                         age={calculateAge(date_of_birth)}
                         height={calculateHeight(height)}
                         weight={calculateWeight(weight)}
                         salary={salary}
                         filter={findCheck}
+                        onDeleteContact={() => deleteContact(id)}
                     />
                 </Row>
             ))}
