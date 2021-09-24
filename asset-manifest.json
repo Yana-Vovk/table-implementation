@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/table-implementation/static/css/main.1c79cf71.chunk.css",
+    "main.js": "/table-implementation/static/js/main.4daa523b.chunk.js",
+    "main.js.map": "/table-implementation/static/js/main.4daa523b.chunk.js.map",
+    "runtime-main.js": "/table-implementation/static/js/runtime-main.b6cff2df.js",
+    "runtime-main.js.map": "/table-implementation/static/js/runtime-main.b6cff2df.js.map",
+    "static/js/2.20a3f633.chunk.js": "/table-implementation/static/js/2.20a3f633.chunk.js",
+    "static/js/2.20a3f633.chunk.js.map": "/table-implementation/static/js/2.20a3f633.chunk.js.map",
+    "static/js/3.b6d114f9.chunk.js": "/table-implementation/static/js/3.b6d114f9.chunk.js",
+    "static/js/3.b6d114f9.chunk.js.map": "/table-implementation/static/js/3.b6d114f9.chunk.js.map",
+    "index.html": "/table-implementation/index.html",
+    "static/css/main.1c79cf71.chunk.css.map": "/table-implementation/static/css/main.1c79cf71.chunk.css.map",
+    "static/js/2.20a3f633.chunk.js.LICENSE.txt": "/table-implementation/static/js/2.20a3f633.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/table-implementation/static/media/MuseoSansCyrl-700.f8642cdf.ttf",
+    "static/media/checkmark.6b292a9d.svg": "/table-implementation/static/media/checkmark.6b292a9d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b6cff2df.js",
+    "static/js/2.20a3f633.chunk.js",
+    "static/css/main.1c79cf71.chunk.css",
+    "static/js/main.4daa523b.chunk.js"
+  ]
+}
